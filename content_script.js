@@ -136,7 +136,7 @@ while (n) {
 								
 								if (attribute == "") {
 								
-									if(n.getAttribute("property")=="cc:attributionName"&&n.getAttribute("rel")=="cc:attributionURL"){
+									if(n.getAttribute("property")=="cc:attributionName"&&n.getAttribute("rel").indexOf("cc:attributionURL") > -1){
 										
 										attribute = n.getAttribute(attr_names[i]);
 										triple_array = Array(asset, "cc:attributionName", n.innerHTML);
